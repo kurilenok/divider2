@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ru.rambler.libs.swipe_layout.SwipeLayout
+    android:id="@+id/swipe_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    app:left_swipe_enabled="true"
+    app:right_swipe_enabled="true">
+
+    <LinearLayout
+        android:id="@+id/list_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_android" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            tools:text="Test" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/left_part"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:gravity="left"
+        app:bring_to_clamp="150dp"
+        app:sticky="50dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_purple">
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/purple"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_purple">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_android" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/orange"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_orange_dark">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_android" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+</ru.rambler.libs.swipe_layout.SwipeLayout>
