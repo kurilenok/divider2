@@ -42,8 +42,10 @@ class MyAdapter(val items: ArrayList<Item>, listener: RecyclerClickListener) : R
 
     fun removeItem(item: Item) {
         val index = items.indexOf(item)
-        items.removeAt(index)
-        notifyItemRemoved(index)
+        if (index != -1) {
+            items.removeAt(index)
+            notifyItemRemoved(index)
+        }
     }
 
 }
